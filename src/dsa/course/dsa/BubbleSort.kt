@@ -14,10 +14,10 @@ class BubbleSort {
     // this by comparing adjacent number and place the smallest number in the smallest index once we found big number in small index.
     fun bubbleSort(arr1: Array<Int>) {
         // inner for loop is to compare /outer for loop is iteration
-        for (i in arr1.indices) {
-            for (j in  0 until arr1.size-1) {
-                if (arr1[j] > arr1[j + 1])  swapLogic(arr1, j)
-            }
+        for (i in arr1.indices) { // n + 1
+            for (j in  0 until arr1.size-1) { //n (n + 1)
+                if (arr1[j] > arr1[j + 1])  swapLogic(arr1, j) // n(n)        n (n + 1) + n + 1 + n(n) ==> n^2 + n + n + 1 +  n^2
+            }                                                                                               // 2n^2 + 2n + 1 = O(n^2)
         }
     }
 
