@@ -13,7 +13,7 @@ fun main() {
     val sorter = MergeSort()
     sorter.divideLogic(testedArray, 0, testedArray.size - 1)
     println("Sorted array: ${testedArray.contentToString()}")
-    val checkThis = arrayOf(13,5,9,21,2,16)
+    val checkThis = arrayOf(13, 5, 9, 21, 2, 16)
     println(testedArray.sliceArray(0..4).contentToString())
     println(testedArray.sliceArray(0..1).contentToString())
     println(testedArray.sliceArray(0..0).contentToString())
@@ -47,7 +47,7 @@ class MergeSort {
         }
 
         for (j in rightArray.indices) {
-           rightArray[j] = testedArray[middle + 1 + j]
+            rightArray[j] = testedArray[middle + 1 + j]
         }
         println(leftArray.contentToString())
         println(rightArray.contentToString())
