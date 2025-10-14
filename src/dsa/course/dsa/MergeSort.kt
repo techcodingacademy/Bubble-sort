@@ -9,18 +9,18 @@ import java.util.Arrays
 // which is based on the principle of merging sorted arrays.
 
 fun main() {
-    val array = arrayOf(13, 5, 9, 21, 2, 16)
+    val testedArray = arrayOf(13, 5, 9, 21, 2, 16)
     val sorter = MergeSort()
-    sorter.divideLogic(array, 0, array.size - 1)
-    println("Sorted array: ${array.contentToString()}")
-    //val checkThis = arrayOf(13,5,9,21,2,16)
-//    println(testedArray.sliceArray(0..4).contentToString())
-//    println(testedArray.sliceArray(0..1).contentToString())
-//    println(testedArray.sliceArray(0..0).contentToString())
-//    println(testedArray.sliceArray(1..1).contentToString())
-//    println(testedArray.sliceArray(1..2).contentToString())
-//    println(testedArray.sliceArray(2..3).contentToString())
-//    println(testedArray.sliceArray(3..4).contentToString())
+    sorter.divideLogic(testedArray, 0, testedArray.size - 1)
+    println("Sorted array: ${testedArray.contentToString()}")
+    val checkThis = arrayOf(13,5,9,21,2,16)
+    println(testedArray.sliceArray(0..4).contentToString())
+    println(testedArray.sliceArray(0..1).contentToString())
+    println(testedArray.sliceArray(0..0).contentToString())
+    println(testedArray.sliceArray(1..1).contentToString())
+    println(testedArray.sliceArray(1..2).contentToString())
+    println(testedArray.sliceArray(2..3).contentToString())
+    println(testedArray.sliceArray(3..4).contentToString())
 
 
 }
