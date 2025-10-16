@@ -50,12 +50,16 @@ class TwoPointerWithConstantWindow {
         var longestLength = 0//3
         var left = 0
         for (right in arr.indices) {
+            //expand window size
             currentSum += arr[right]
+            //Shrink window size
             while (currentSum > k) {
                 currentSum -= arr[left]
                 left++
             }
+            //Check for the valid length of the window
             val windoLenght = right - left + 1
+            //Check for the valid length of the window
             longestLength = maxOf(longestLength, windoLenght)
         }
         return longestLength
