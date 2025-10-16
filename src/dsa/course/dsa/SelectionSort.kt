@@ -10,20 +10,16 @@ fun main() {
 }
 
 class SelectionSort {
-
     fun selectionSort(newArrays: Array<Int>) {
-        for (i in newArrays.indices) {
-            var indexOfMinValue = i
-             for (j in i + 1 until newArrays.size){// j 1,2,3,4,5 middle = 0
-                 if (newArrays[indexOfMinValue] > newArrays [j]) // 13 > 5
-                     indexOfMinValue = j
-             }
-            val temp = newArrays[indexOfMinValue]
-            newArrays[indexOfMinValue] = newArrays[i]
-            newArrays[i] = temp
+        val minIndex = 0
+
+        if (newArrays[minIndex] > newArrays[1]) {
+
+
         }
 
     }
+
 }
 
 
