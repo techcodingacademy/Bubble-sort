@@ -3,12 +3,14 @@ package dsa.course.dsa
 fun main() {
     //val arr20 = arrayOf(-1, 2, 3, 3, 4, 5, -1)
     val arr20 = arrayOf(3, 1, 2, 1, 1)
+    val newArray = arrayOf(6,2,3,4,7,2,1,7,1)
     val createNewInstance = TwoPointerWithConstantWindow()
     println("MaxSum ${createNewInstance.sumOfConstantWindow(arr20, k = 5)}")
     println("==================================================")
     println("Numbers of valid windows ${createNewInstance.numberOfValidWindows(arr20, k = 4)}")
     println("==================================================")
     println("Longest windows ${createNewInstance.longestLengths(arr20,4)}")
+    println("New pointer card ${createNewInstance.maxPointFromCard(newArray, k = 4)}")
 
 }
 
@@ -65,4 +67,46 @@ class TwoPointerWithConstantWindow {
         return longestLength
     }
 
+    fun maxPointFromCard(arr10: Array<Int>, k: Int):Int{
+        //(6,2,3,4,7,2,1,7,1)
+        var leftSum = 0 // 15
+        var rightSum = 0
+        for (i in 0 until k) { // i = 0,1,2,3
+            leftSum += arr10[i] // 6 + 2 + 3 + 4
+
+        }
+        var totalSumSeen = leftSum
+
+        for (j in 0 until k){
+            // 0 to 3
+            //So the k-1-j shows the movement from right to left adding and reducing base on k value
+            leftSum -= arr10[k - 1 - j]
+            rightSum += arr10[arr10.size - 1 - j]
+            totalSumSeen = maxOf(totalSumSeen,leftSum + rightSum)
+        }
+        return totalSumSeen
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
