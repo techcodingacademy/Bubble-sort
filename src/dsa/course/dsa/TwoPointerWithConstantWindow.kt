@@ -4,7 +4,10 @@ fun main() {
     //val arr20 = arrayOf(-1, 2, 3, 3, 4, 5, -1)
     val arr20 = arrayOf(3, 1, 2, 1, 1)
     val newArray = arrayOf(6,2,3,4,7,2,1,7,1)
+    val stringArray ="c,a,d"
+
     val createNewInstance = TwoPointerWithConstantWindow()
+    println("Character ${createNewInstance.findLongestSubString(stringArray)}")
     println("MaxSum ${createNewInstance.sumOfConstantWindow(arr20, k = 5)}")
     println("==================================================")
     println("Numbers of valid windows ${createNewInstance.numberOfValidWindows(arr20, k = 4)}")
@@ -85,6 +88,14 @@ class TwoPointerWithConstantWindow {
             totalSumSeen = maxOf(totalSumSeen,leftSum + rightSum)
         }
         return totalSumSeen
+    }
+    fun findLongestSubString(str: String) {
+           for (i in str.indices){
+               for (j in i + 1..str.length){
+                   val subString = str.substring(i,j)
+                   println("sub string $subString")
+               }
+           }
     }
 
 }
